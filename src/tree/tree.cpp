@@ -45,8 +45,8 @@ UkkTreeIndex UkkTree::location_downward(UkkTreeIndex index){
             return index;
         auto father=index.second->father;
         for (auto edge_it:father->edges)
-        if (edge_it->second->node()==index.second){
-            auto fatherToCurrent=edge_it->second;
+        if (edge_it.second->node()==index.second){
+            auto fatherToCurrent=edge_it.second;
             int lenght_of_the_edge_i_am_walinkg_back=edgeLenght(fatherToCurrent);
             UkkTreeIndex query(
               index.first+lenght_of_the_edge_i_am_walinkg_back,
