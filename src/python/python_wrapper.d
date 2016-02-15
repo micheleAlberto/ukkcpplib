@@ -1,0 +1,34 @@
+src/python/python_wrapper.cxx: \
+  /usr/share/swig2.0/swig.swg \
+  /usr/share/swig2.0/swigwarnings.swg \
+  /usr/share/swig2.0/swigwarn.swg \
+  /usr/share/swig2.0/python/python.swg \
+  /usr/share/swig2.0/python/pymacros.swg \
+  /usr/share/swig2.0/typemaps/swigmacros.swg \
+  /usr/share/swig2.0/python/pyruntime.swg \
+  /usr/share/swig2.0/python/pyuserdir.swg \
+  /usr/share/swig2.0/python/pytypemaps.swg \
+  /usr/share/swig2.0/typemaps/fragments.swg \
+  /usr/share/swig2.0/python/pyfragments.swg \
+  /usr/share/swig2.0/python/pyprimtypes.swg \
+  /usr/share/swig2.0/python/pystrings.swg \
+  /usr/share/swig2.0/typemaps/swigtypemaps.swg \
+  /usr/share/swig2.0/typemaps/exception.swg \
+  /usr/share/swig2.0/typemaps/swigtype.swg \
+  /usr/share/swig2.0/typemaps/void.swg \
+  /usr/share/swig2.0/typemaps/swigobject.swg \
+  /usr/share/swig2.0/typemaps/valtypes.swg \
+  /usr/share/swig2.0/typemaps/ptrtypes.swg \
+  /usr/share/swig2.0/typemaps/inoutlist.swg \
+  /usr/share/swig2.0/typemaps/primtypes.swg \
+  /usr/share/swig2.0/typemaps/string.swg \
+  /usr/share/swig2.0/typemaps/strings.swg \
+  /usr/share/swig2.0/typemaps/misctypes.swg \
+  /usr/share/swig2.0/typemaps/enumint.swg \
+  /usr/share/swig2.0/python/pyopers.swg \
+  /usr/share/swig2.0/python/pythonkw.swg \
+  /usr/share/swig2.0/python/pydocs.swg \
+  /usr/share/swig2.0/python/pyclasses.swg \
+  /usr/share/swig2.0/python/pyinit.swg \
+  /usr/share/swig2.0/python/pybackward.swg \
+  src/python/tree.i 

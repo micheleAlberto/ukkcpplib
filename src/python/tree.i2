@@ -1,0 +1,21 @@
+%module tree
+%{
+#include "../tree/tree.hpp"
+#include "../tree/node.hpp"
+#include "../tree/symbol.hpp"
+#include "../tree/query/query.hpp"
+
+%}
+%include "std_string.i"
+%include "std_vector.i"
+
+namespace std {
+   %template(vectorsymbol) vector<char>;
+};
+
+%include "../tree/tree.hpp"
+%include "../tree/node.hpp"
+%include "../tree/symbol.hpp"
+%include "../tree/query/query.hpp"
+
+
