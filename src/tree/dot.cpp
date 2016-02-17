@@ -30,7 +30,8 @@ std::string UkkTree::DOT(UkkEdgeBase *e,int father_name){
       ss << DOT(next);
     }
     else {
-      ss << father_name <<" -> \""<<e->first<<"."<<edgeString(e)<<"\";\n";
+      ss << father_name <<" -> \""<<edgeString(e)<<"\";\n";
+      //ss << father_name <<" -> \""<<e->first<<"."<<edgeString(e)<<"\";\n";
     };
     return ss.str();
 };

@@ -20,7 +20,7 @@ echo "compile python interface"
 g++ -std=gnu++11 -fPIC -c src/python/python_wrapper.cxx -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -fPIC -o src/python/python_wrapper.o
 
 
-
+mkdir bin
 echo "compile app"
 rm bin/app
 g++ -std=gnu++11 src/tree/node.o src/tree/query/query.o src/tree/tree.o src/tree/dot.o src/utils/utils.o src/app/app.cpp -o bin/app

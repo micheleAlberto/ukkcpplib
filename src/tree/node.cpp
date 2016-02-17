@@ -116,7 +116,14 @@ void UkkEdgeBase::split(UkkNode *parent,int last_common_index,int leaf_bottom,Uk
         UkkEdge *new_internal_edge=new UkkEdge(nie_first,nie_last,new_internal_node);
         //NP parent node
         Symbol z=T->text[subtree_index];
-        assert(parent->edges[z]==this);
+        if (parent->edges[z]!=this ) {
+          std::cout << "splitting"<<std::endl;
+          std::cout << "this :"<<this<<std::endl;
+          std::cout << "Z :"<<z<<std::endl;
+          std::cout << "(old) parent->edges[z] :"<< parent->edges[z] <<std::endl;
+          std::cout << "(new) parent->edges[z] :"<< new_internal_edge <<std::endl;
+          assert(parent->edges[z]==this);
+        };
         parent->edges[z]=new_internal_edge;
         //LLN suffix link:
         if (bool(T->last_leaf_node)
