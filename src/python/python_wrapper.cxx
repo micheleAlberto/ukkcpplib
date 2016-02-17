@@ -8733,6 +8733,148 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_UkkTree_JSON__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  UkkTree *arg1 = (UkkTree *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::string result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UkkTree_JSON",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkTree, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkTree_JSON" "', argument " "1"" of type '" "UkkTree *""'"); 
+  }
+  arg1 = reinterpret_cast< UkkTree * >(argp1);
+  result = (arg1)->JSON();
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UkkTree_JSON__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  UkkTree *arg1 = (UkkTree *) 0 ;
+  UkkNode *arg2 = (UkkNode *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::string result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UkkTree_JSON",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkTree, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkTree_JSON" "', argument " "1"" of type '" "UkkTree *""'"); 
+  }
+  arg1 = reinterpret_cast< UkkTree * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkNode, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkTree_JSON" "', argument " "2"" of type '" "UkkNode *""'"); 
+  }
+  arg2 = reinterpret_cast< UkkNode * >(argp2);
+  result = (arg1)->JSON(arg2);
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UkkTree_JSON__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  UkkTree *arg1 = (UkkTree *) 0 ;
+  UkkEdgeBase *arg2 = (UkkEdgeBase *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::string result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UkkTree_JSON",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkTree, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkTree_JSON" "', argument " "1"" of type '" "UkkTree *""'"); 
+  }
+  arg1 = reinterpret_cast< UkkTree * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkEdgeBase, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkTree_JSON" "', argument " "2"" of type '" "UkkEdgeBase *""'"); 
+  }
+  arg2 = reinterpret_cast< UkkEdgeBase * >(argp2);
+  result = (arg1)->JSON(arg2);
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UkkTree_JSON(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkTree, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_UkkTree_JSON__SWIG_0(self, args);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkTree, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_UkkNode, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_UkkTree_JSON__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkTree, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_UkkEdgeBase, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_UkkTree_JSON__SWIG_2(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'UkkTree_JSON'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    UkkTree::JSON()\n"
+    "    UkkTree::JSON(UkkNode *)\n"
+    "    UkkTree::JSON(UkkEdgeBase *)\n");
+  return 0;
+}
+
+
 SWIGINTERN PyObject *_wrap_UkkTree_DOT__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   UkkTree *arg1 = (UkkTree *) 0 ;
@@ -10709,6 +10851,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UkkTree_search", _wrap_UkkTree_search, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_count", _wrap_UkkTree_count, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_pptext", _wrap_UkkTree_pptext, METH_VARARGS, NULL},
+	 { (char *)"UkkTree_JSON", _wrap_UkkTree_JSON, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_DOT", _wrap_UkkTree_DOT, METH_VARARGS, NULL},
 	 { (char *)"delete_UkkTree", _wrap_delete_UkkTree, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_swigregister", UkkTree_swigregister, METH_VARARGS, NULL},

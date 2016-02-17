@@ -50,6 +50,9 @@ class UkkTree {
     int count(UkkNode *n);
 #ifdef NAMED
     void pptext();
+    std::string JSON();
+    std::string JSON(UkkNode* n);
+    std::string JSON(UkkEdgeBase *e);
     std::string DOT();
     std::string DOT(UkkNode* n);
     std::string DOT(UkkEdgeBase *e,int father_name);

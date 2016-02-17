@@ -12,6 +12,14 @@ std::string UkkTree::DOT(){
   return ss.str();
 };
 
+std::string UkkTree::JSON(){
+  std::stringstream ss;
+  ss<<"{";
+  ss<<JSON(root);
+  ss<<"}\n";
+  return ss.str();
+};
+
 std::string UkkTree::DOT(UkkNode* n){
     std::stringstream ss;
     ss<<"//begin node "<<n->name<<"\n";
@@ -22,6 +30,34 @@ std::string UkkTree::DOT(UkkNode* n){
     ss<<"//end node "<<n->name<<"\n";
     return ss.str();
 };
+
+std::string UkkTree::JSON(UkkNode* n){
+    std::stringstream ss;
+    ss<<" "<<n->name<< ": {"<<"\n";
+    for (auto edgeMapIt:n->edges){
+        ss<<"    \"" <<edgeMapIt.first<<"\" :    "<< JSON(edgeMapIt.second)<<",\n";
+    };
+    if (n->suffixLink)
+      ss <<"     -1 : "<<n->suffixLink->name<<"\n";
+    ss<<"},\n";
+    for (auto edgeMapIt:n->edges)   if (edgeMapIt.second->node())
+      ss<<JSON(edgeMapIt.second->node());
+    return ss.str();
+};
+std::string UkkTree::JSON(UkkEdgeBase *e){
+    std::stringstream ss;
+    UkkNode* next=e->node();
+    if (next){
+      int from=e->first;
+      int to=from+edgeLenght(e);
+      ss << "("<<from<<", "<<to<<", "<<(next->name)<<")";
+    }
+    else {
+      ss << e->first;
+    };
+    return ss.str();
+};
+
 std::string UkkTree::DOT(UkkEdgeBase *e,int father_name){
     std::stringstream ss;
     UkkNode* next=e->node();
