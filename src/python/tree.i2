@@ -1,9 +1,7 @@
 %module tree
 %{
 #include "../tree/tree.hpp"
-#include "../tree/node.hpp"
-#include "../tree/symbol.hpp"
-#include "../tree/query/query.hpp"
+
 
 %}
 %include "std_string.i"
@@ -14,8 +12,3 @@ namespace std {
 };
 
 %include "../tree/tree.hpp"
-%include "../tree/node.hpp"
-%include "../tree/symbol.hpp"
-%include "../tree/query/query.hpp"
-
-

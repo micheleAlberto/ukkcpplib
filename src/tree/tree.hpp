@@ -11,7 +11,6 @@
 class UkkNode;
 class UkkLeaf;
 class UkkEdgeBase;
-class UkkQuery;
 typedef std::pair<int,UkkNode*> UkkTreeIndex;//index,node
 class UkkTree {
     private:
@@ -44,8 +43,6 @@ class UkkTree {
     std::string substring(int from,int to);
     std::string leafString( UkkEdgeBase *e);
     std::string edgeString( UkkEdgeBase *e);
-    //query
-    UkkQuery query();
     bool search(std::vector<Symbol> queryText,UkkTreeIndex *answer);
     int count(UkkNode *n);
 #ifdef NAMED

@@ -5,7 +5,6 @@ UkkTree::UkkTree(){
     root=new UkkNode();
     last_leaf_node=root;};
 
-UkkQuery UkkTree::query(){return UkkQuery(this);};
 UkkTreeIndex UkkTree::location_downward(UkkNode *n,int index){
         UkkTreeIndex query(index,n);
         return location_downward(query);};

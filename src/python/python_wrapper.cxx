@@ -2937,31 +2937,27 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-#define SWIGTYPE_p_UkkEdge swig_types[0]
+#define SWIGTYPE_p_Symbol swig_types[0]
 #define SWIGTYPE_p_UkkEdgeBase swig_types[1]
 #define SWIGTYPE_p_UkkLeaf swig_types[2]
 #define SWIGTYPE_p_UkkNode swig_types[3]
-#define SWIGTYPE_p_UkkQuery swig_types[4]
-#define SWIGTYPE_p_UkkTree swig_types[5]
-#define SWIGTYPE_p_UkkTreeOptions swig_types[6]
-#define SWIGTYPE_p_allocator_type swig_types[7]
-#define SWIGTYPE_p_char swig_types[8]
-#define SWIGTYPE_p_difference_type swig_types[9]
-#define SWIGTYPE_p_p_PyObject swig_types[10]
-#define SWIGTYPE_p_size_type swig_types[11]
-#define SWIGTYPE_p_std__allocatorT_char_t swig_types[12]
-#define SWIGTYPE_p_std__invalid_argument swig_types[13]
-#define SWIGTYPE_p_std__pairT_int_UkkNode_p_t swig_types[14]
-#define SWIGTYPE_p_std__pairT_int_int_t swig_types[15]
-#define SWIGTYPE_p_std__unordered_mapT_char_UkkEdgeBase_p_t swig_types[16]
-#define SWIGTYPE_p_std__vectorT__Tp__Alloc_t swig_types[17]
-#define SWIGTYPE_p_std__vectorT_char_std__allocatorT_char_t_t swig_types[18]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[19]
-#define SWIGTYPE_p_std__vectorT_std__pairT_int_int_t_std__allocatorT_std__pairT_int_int_t_t_t swig_types[20]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[21]
-#define SWIGTYPE_p_value_type swig_types[22]
-static swig_type_info *swig_types[24];
-static swig_module_info swig_module = {swig_types, 23, 0, 0, 0, 0};
+#define SWIGTYPE_p_UkkTree swig_types[4]
+#define SWIGTYPE_p_UkkTreeOptions swig_types[5]
+#define SWIGTYPE_p_allocator_type swig_types[6]
+#define SWIGTYPE_p_char swig_types[7]
+#define SWIGTYPE_p_difference_type swig_types[8]
+#define SWIGTYPE_p_p_PyObject swig_types[9]
+#define SWIGTYPE_p_size_type swig_types[10]
+#define SWIGTYPE_p_std__allocatorT_char_t swig_types[11]
+#define SWIGTYPE_p_std__invalid_argument swig_types[12]
+#define SWIGTYPE_p_std__pairT_int_UkkNode_p_t swig_types[13]
+#define SWIGTYPE_p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t swig_types[14]
+#define SWIGTYPE_p_std__vectorT__Tp__Alloc_t swig_types[15]
+#define SWIGTYPE_p_std__vectorT_char_std__allocatorT_char_t_t swig_types[16]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[17]
+#define SWIGTYPE_p_value_type swig_types[18]
+static swig_type_info *swig_types[20];
+static swig_module_info swig_module = {swig_types, 19, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3059,9 +3055,7 @@ namespace swig {
 
 
 #include "../tree/tree.hpp"
-#include "../tree/node.hpp"
-#include "../tree/symbol.hpp"
-#include "../tree/query/query.hpp"
+
 
 
 
@@ -7707,7 +7701,7 @@ SWIGINTERN PyObject *_wrap_UkkTree_text_set(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkTree_text_set" "', argument " "1"" of type '" "UkkTree *""'"); 
   }
   arg1 = reinterpret_cast< UkkTree * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__vectorT_char_std__allocatorT_char_t_t, 0 |  0 );
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkTree_text_set" "', argument " "2"" of type '" "std::vector< Symbol,std::allocator< Symbol > > *""'"); 
   }
@@ -7735,7 +7729,7 @@ SWIGINTERN PyObject *_wrap_UkkTree_text_get(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = reinterpret_cast< UkkTree * >(argp1);
   result = (std::vector< Symbol,std::allocator< Symbol > > *)& ((arg1)->text);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_char_std__allocatorT_char_t_t, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t, 0 |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -8377,8 +8371,8 @@ SWIGINTERN PyObject *_wrap_UkkTree_add_symbol__SWIG_0(PyObject *SWIGUNUSEDPARM(s
   Symbol arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  char val2 ;
-  int ecode2 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -8388,11 +8382,19 @@ SWIGINTERN PyObject *_wrap_UkkTree_add_symbol__SWIG_0(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkTree_add_symbol" "', argument " "1"" of type '" "UkkTree *""'"); 
   }
   arg1 = reinterpret_cast< UkkTree * >(argp1);
-  ecode2 = SWIG_AsVal_char(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkTree_add_symbol" "', argument " "2"" of type '" "Symbol""'");
-  } 
-  arg2 = static_cast< Symbol >(val2);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_Symbol,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkTree_add_symbol" "', argument " "2"" of type '" "Symbol""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UkkTree_add_symbol" "', argument " "2"" of type '" "Symbol""'");
+    } else {
+      Symbol * temp = reinterpret_cast< Symbol * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
   (arg1)->add_symbol(arg2);
   resultobj = SWIG_Py_Void();
   return resultobj;
@@ -8450,10 +8452,8 @@ SWIGINTERN PyObject *_wrap_UkkTree_add_symbol(PyObject *self, PyObject *args) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkTree, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      {
-        int res = SWIG_AsVal_char(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_Symbol, 0);
+      _v = SWIG_CheckState(res);
       if (_v) {
         return _wrap_UkkTree_add_symbol__SWIG_0(self, args);
       }
@@ -8617,35 +8617,15 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_UkkTree_query(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkTree *arg1 = (UkkTree *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkTree_query",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkTree, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkTree_query" "', argument " "1"" of type '" "UkkTree *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkTree * >(argp1);
-  result = (arg1)->query();
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_UkkTree_search(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   UkkTree *arg1 = (UkkTree *) 0 ;
-  std::vector< Symbol,std::allocator< Symbol > > arg2 ;
+  SwigValueWrapper< std::vector< Symbol,std::allocator< Symbol > > > arg2 ;
   UkkTreeIndex *arg3 = (UkkTreeIndex *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
   PyObject * obj0 = 0 ;
@@ -8660,13 +8640,17 @@ SWIGINTERN PyObject *_wrap_UkkTree_search(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   arg1 = reinterpret_cast< UkkTree * >(argp1);
   {
-    std::vector<char,std::allocator< char > > *ptr = (std::vector<char,std::allocator< char > > *)0;
-    int res = swig::asptr(obj1, &ptr);
-    if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "UkkTree_search" "', argument " "2"" of type '" "std::vector< Symbol,std::allocator< Symbol > >""'"); 
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkTree_search" "', argument " "2"" of type '" "std::vector< Symbol,std::allocator< Symbol > >""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UkkTree_search" "', argument " "2"" of type '" "std::vector< Symbol,std::allocator< Symbol > >""'");
+    } else {
+      std::vector< Symbol,std::allocator< Symbol > > * temp = reinterpret_cast< std::vector< Symbol,std::allocator< Symbol > > * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
     }
-    arg2 = *ptr;
-    if (SWIG_IsNewObj(res)) delete ptr;
   }
   res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_std__pairT_int_UkkNode_p_t, 0 |  0 );
   if (!SWIG_IsOK(res3)) {
@@ -9060,1713 +9044,6 @@ SWIGINTERN PyObject *UkkTree_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObje
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *_wrap_UkkEdgeBase_first_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdgeBase *arg1 = (UkkEdgeBase *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkEdgeBase_first_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdgeBase, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdgeBase_first_set" "', argument " "1"" of type '" "UkkEdgeBase *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdgeBase * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkEdgeBase_first_set" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  if (arg1) (arg1)->first = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkEdgeBase_first_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdgeBase *arg1 = (UkkEdgeBase *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkEdgeBase_first_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdgeBase, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdgeBase_first_get" "', argument " "1"" of type '" "UkkEdgeBase *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdgeBase * >(argp1);
-  result = (int) ((arg1)->first);
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkEdgeBase_lenght(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdgeBase *arg1 = (UkkEdgeBase *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkEdgeBase_lenght",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdgeBase, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdgeBase_lenght" "', argument " "1"" of type '" "UkkEdgeBase *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdgeBase * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkEdgeBase_lenght" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  result = (int)(arg1)->lenght(arg2);
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkEdgeBase_node(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdgeBase *arg1 = (UkkEdgeBase *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  UkkNode *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkEdgeBase_node",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdgeBase, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdgeBase_node" "', argument " "1"" of type '" "UkkEdgeBase *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdgeBase * >(argp1);
-  result = (UkkNode *)(arg1)->node();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkNode, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkEdgeBase_split(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdgeBase *arg1 = (UkkEdgeBase *) 0 ;
-  UkkNode *arg2 = (UkkNode *) 0 ;
-  int arg3 ;
-  int arg4 ;
-  UkkTree *arg5 = (UkkTree *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int val3 ;
-  int ecode3 = 0 ;
-  int val4 ;
-  int ecode4 = 0 ;
-  void *argp5 = 0 ;
-  int res5 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  PyObject * obj3 = 0 ;
-  PyObject * obj4 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOOOO:UkkEdgeBase_split",&obj0,&obj1,&obj2,&obj3,&obj4)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdgeBase, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdgeBase_split" "', argument " "1"" of type '" "UkkEdgeBase *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdgeBase * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkEdgeBase_split" "', argument " "2"" of type '" "UkkNode *""'"); 
-  }
-  arg2 = reinterpret_cast< UkkNode * >(argp2);
-  ecode3 = SWIG_AsVal_int(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "UkkEdgeBase_split" "', argument " "3"" of type '" "int""'");
-  } 
-  arg3 = static_cast< int >(val3);
-  ecode4 = SWIG_AsVal_int(obj3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "UkkEdgeBase_split" "', argument " "4"" of type '" "int""'");
-  } 
-  arg4 = static_cast< int >(val4);
-  res5 = SWIG_ConvertPtr(obj4, &argp5,SWIGTYPE_p_UkkTree, 0 |  0 );
-  if (!SWIG_IsOK(res5)) {
-    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "UkkEdgeBase_split" "', argument " "5"" of type '" "UkkTree *""'"); 
-  }
-  arg5 = reinterpret_cast< UkkTree * >(argp5);
-  (arg1)->split(arg2,arg3,arg4,arg5);
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_UkkEdgeBase(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdgeBase *arg1 = (UkkEdgeBase *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_UkkEdgeBase",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdgeBase, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UkkEdgeBase" "', argument " "1"" of type '" "UkkEdgeBase *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdgeBase * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *UkkEdgeBase_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_UkkEdgeBase, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
-SWIGINTERN PyObject *_wrap_UkkNode_father_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  UkkNode *arg2 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkNode_father_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_father_set" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkNode, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkNode_father_set" "', argument " "2"" of type '" "UkkNode *""'"); 
-  }
-  arg2 = reinterpret_cast< UkkNode * >(argp2);
-  if (arg1) (arg1)->father = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkNode_father_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  UkkNode *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkNode_father_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_father_get" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  result = (UkkNode *) ((arg1)->father);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkNode, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkNode_edges_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  SymbolMap *arg2 = (SymbolMap *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkNode_edges_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_edges_set" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__unordered_mapT_char_UkkEdgeBase_p_t, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkNode_edges_set" "', argument " "2"" of type '" "SymbolMap *""'"); 
-  }
-  arg2 = reinterpret_cast< SymbolMap * >(argp2);
-  if (arg1) (arg1)->edges = *arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkNode_edges_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  SymbolMap *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkNode_edges_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_edges_get" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  result = (SymbolMap *)& ((arg1)->edges);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__unordered_mapT_char_UkkEdgeBase_p_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkNode_suffixLink_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  UkkNode *arg2 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkNode_suffixLink_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_suffixLink_set" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkNode, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkNode_suffixLink_set" "', argument " "2"" of type '" "UkkNode *""'"); 
-  }
-  arg2 = reinterpret_cast< UkkNode * >(argp2);
-  if (arg1) (arg1)->suffixLink = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkNode_suffixLink_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  UkkNode *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkNode_suffixLink_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_suffixLink_get" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  result = (UkkNode *) ((arg1)->suffixLink);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkNode, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_UkkNode(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":new_UkkNode")) SWIG_fail;
-  result = (UkkNode *)new UkkNode();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkNode, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkNode_name_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkNode_name_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_name_set" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkNode_name_set" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  if (arg1) (arg1)->name = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkNode_name_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkNode_name_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_name_get" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  result = (int) ((arg1)->name);
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkNode_pprint(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkNode_pprint",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_pprint" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  (arg1)->pprint();
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkNode_isRoot(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  bool result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkNode_isRoot",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkNode_isRoot" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  result = (bool)(arg1)->isRoot();
-  resultobj = SWIG_From_bool(static_cast< bool >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_UkkNode(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkNode *arg1 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_UkkNode",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkNode, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UkkNode" "', argument " "1"" of type '" "UkkNode *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkNode * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *UkkNode_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_UkkNode, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
-SWIGINTERN PyObject *_wrap_new_UkkLeaf(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  int arg1 ;
-  int val1 ;
-  int ecode1 = 0 ;
-  PyObject * obj0 = 0 ;
-  UkkLeaf *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:new_UkkLeaf",&obj0)) SWIG_fail;
-  ecode1 = SWIG_AsVal_int(obj0, &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_UkkLeaf" "', argument " "1"" of type '" "int""'");
-  } 
-  arg1 = static_cast< int >(val1);
-  result = (UkkLeaf *)new UkkLeaf(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkLeaf, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkLeaf_lenght(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkLeaf *arg1 = (UkkLeaf *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkLeaf_lenght",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkLeaf, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkLeaf_lenght" "', argument " "1"" of type '" "UkkLeaf *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkLeaf * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkLeaf_lenght" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  result = (int)(arg1)->lenght(arg2);
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkLeaf_node(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkLeaf *arg1 = (UkkLeaf *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  UkkNode *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkLeaf_node",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkLeaf, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkLeaf_node" "', argument " "1"" of type '" "UkkLeaf *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkLeaf * >(argp1);
-  result = (UkkNode *)(arg1)->node();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkNode, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_UkkLeaf(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkLeaf *arg1 = (UkkLeaf *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_UkkLeaf",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkLeaf, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UkkLeaf" "', argument " "1"" of type '" "UkkLeaf *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkLeaf * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *UkkLeaf_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_UkkLeaf, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
-SWIGINTERN PyObject *_wrap_UkkEdge_last_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdge *arg1 = (UkkEdge *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkEdge_last_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdge, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdge_last_set" "', argument " "1"" of type '" "UkkEdge *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdge * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkEdge_last_set" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  if (arg1) (arg1)->last = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkEdge_last_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdge *arg1 = (UkkEdge *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkEdge_last_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdge, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdge_last_get" "', argument " "1"" of type '" "UkkEdge *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdge * >(argp1);
-  result = (int) ((arg1)->last);
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkEdge_n_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdge *arg1 = (UkkEdge *) 0 ;
-  UkkNode *arg2 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkEdge_n_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdge, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdge_n_set" "', argument " "1"" of type '" "UkkEdge *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdge * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkNode, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkEdge_n_set" "', argument " "2"" of type '" "UkkNode *""'"); 
-  }
-  arg2 = reinterpret_cast< UkkNode * >(argp2);
-  if (arg1) (arg1)->n = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkEdge_n_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdge *arg1 = (UkkEdge *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  UkkNode *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkEdge_n_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdge, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdge_n_get" "', argument " "1"" of type '" "UkkEdge *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdge * >(argp1);
-  result = (UkkNode *) ((arg1)->n);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkNode, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_UkkEdge(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  int arg1 ;
-  int arg2 ;
-  UkkNode *arg3 = (UkkNode *) 0 ;
-  int val1 ;
-  int ecode1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  UkkEdge *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:new_UkkEdge",&obj0,&obj1,&obj2)) SWIG_fail;
-  ecode1 = SWIG_AsVal_int(obj0, &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_UkkEdge" "', argument " "1"" of type '" "int""'");
-  } 
-  arg1 = static_cast< int >(val1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_UkkEdge" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "new_UkkEdge" "', argument " "3"" of type '" "UkkNode *""'"); 
-  }
-  arg3 = reinterpret_cast< UkkNode * >(argp3);
-  result = (UkkEdge *)new UkkEdge(arg1,arg2,arg3);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkEdge, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkEdge_node(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdge *arg1 = (UkkEdge *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  UkkNode *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkEdge_node",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdge, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdge_node" "', argument " "1"" of type '" "UkkEdge *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdge * >(argp1);
-  result = (UkkNode *)(arg1)->node();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkNode, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkEdge_lenght(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdge *arg1 = (UkkEdge *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkEdge_lenght",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdge, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkEdge_lenght" "', argument " "1"" of type '" "UkkEdge *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdge * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkEdge_lenght" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  result = (int)(arg1)->lenght(arg2);
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_UkkEdge(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkEdge *arg1 = (UkkEdge *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_UkkEdge",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkEdge, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UkkEdge" "', argument " "1"" of type '" "UkkEdge *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkEdge * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *UkkEdge_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_UkkEdge, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
-SWIGINTERN PyObject *_wrap_UkkQuery_label(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::string result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkQuery_label",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_label" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  result = (arg1)->label();
-  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_path(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  SymbolList arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_path",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_path" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  {
-    std::vector<char,std::allocator< char > > *ptr = (std::vector<char,std::allocator< char > > *)0;
-    int res = swig::asptr(obj1, &ptr);
-    if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "UkkQuery_path" "', argument " "2"" of type '" "SymbolList""'"); 
-    }
-    arg2 = *ptr;
-    if (SWIG_IsNewObj(res)) delete ptr;
-  }
-  result = (arg1)->path(arg2);
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_UkkQuery(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkTree *arg1 = (UkkTree *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  UkkQuery *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:new_UkkQuery",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkTree, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_UkkQuery" "', argument " "1"" of type '" "UkkTree *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkTree * >(argp1);
-  result = (UkkQuery *)new UkkQuery(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UkkQuery, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_add_suffix__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  Symbol arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  char val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_add_suffix",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_add_suffix" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  ecode2 = SWIG_AsVal_char(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkQuery_add_suffix" "', argument " "2"" of type '" "Symbol""'");
-  } 
-  arg2 = static_cast< Symbol >(val2);
-  result = (arg1)->add_suffix(arg2);
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_add_suffix__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  SymbolList arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_add_suffix",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_add_suffix" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  {
-    std::vector<char,std::allocator< char > > *ptr = (std::vector<char,std::allocator< char > > *)0;
-    int res = swig::asptr(obj1, &ptr);
-    if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "UkkQuery_add_suffix" "', argument " "2"" of type '" "SymbolList""'"); 
-    }
-    arg2 = *ptr;
-    if (SWIG_IsNewObj(res)) delete ptr;
-  }
-  result = (arg1)->add_suffix(arg2);
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_add_suffix__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  char *arg2 = (char *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 ;
-  char *buf2 = 0 ;
-  int alloc2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_add_suffix",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_add_suffix" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkQuery_add_suffix" "', argument " "2"" of type '" "char *""'");
-  }
-  arg2 = reinterpret_cast< char * >(buf2);
-  result = (arg1)->add_suffix(arg2);
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  if (alloc2 == SWIG_NEWOBJ) delete[] buf2;
-  return resultobj;
-fail:
-  if (alloc2 == SWIG_NEWOBJ) delete[] buf2;
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_add_suffix(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[3];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = args ? (int)PyObject_Length(args) : 0;
-  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        int res = SWIG_AsVal_char(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        return _wrap_UkkQuery_add_suffix__SWIG_0(self, args);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      int res = SWIG_AsCharPtrAndSize(argv[1], 0, NULL, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_UkkQuery_add_suffix__SWIG_2(self, args);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      int res = swig::asptr(argv[1], (std::vector<char,std::allocator< char > >**)(0));
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_UkkQuery_add_suffix__SWIG_1(self, args);
-      }
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'UkkQuery_add_suffix'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    UkkQuery::add_suffix(Symbol)\n"
-    "    UkkQuery::add_suffix(SymbolList)\n"
-    "    UkkQuery::add_suffix(char *)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_add_prefix__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  SymbolList arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_add_prefix",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_add_prefix" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  {
-    std::vector<char,std::allocator< char > > *ptr = (std::vector<char,std::allocator< char > > *)0;
-    int res = swig::asptr(obj1, &ptr);
-    if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "UkkQuery_add_prefix" "', argument " "2"" of type '" "SymbolList""'"); 
-    }
-    arg2 = *ptr;
-    if (SWIG_IsNewObj(res)) delete ptr;
-  }
-  result = (arg1)->add_prefix(arg2);
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_add_prefix__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  char *arg2 = (char *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 ;
-  char *buf2 = 0 ;
-  int alloc2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_add_prefix",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_add_prefix" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkQuery_add_prefix" "', argument " "2"" of type '" "char *""'");
-  }
-  arg2 = reinterpret_cast< char * >(buf2);
-  result = (arg1)->add_prefix(arg2);
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  if (alloc2 == SWIG_NEWOBJ) delete[] buf2;
-  return resultobj;
-fail:
-  if (alloc2 == SWIG_NEWOBJ) delete[] buf2;
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_add_prefix(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[3];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = args ? (int)PyObject_Length(args) : 0;
-  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      int res = SWIG_AsCharPtrAndSize(argv[1], 0, NULL, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_UkkQuery_add_prefix__SWIG_1(self, args);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      int res = swig::asptr(argv[1], (std::vector<char,std::allocator< char > >**)(0));
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_UkkQuery_add_prefix__SWIG_0(self, args);
-      }
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'UkkQuery_add_prefix'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    UkkQuery::add_prefix(SymbolList)\n"
-    "    UkkQuery::add_prefix(char *)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_rem_suffix__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkQuery_rem_suffix",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_rem_suffix" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  result = (arg1)->rem_suffix();
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_rem_suffix__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_rem_suffix",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_rem_suffix" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkQuery_rem_suffix" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  result = (arg1)->rem_suffix(arg2);
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_rem_suffix(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[3];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = args ? (int)PyObject_Length(args) : 0;
-  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_UkkQuery_rem_suffix__SWIG_0(self, args);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        int res = SWIG_AsVal_int(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        return _wrap_UkkQuery_rem_suffix__SWIG_1(self, args);
-      }
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'UkkQuery_rem_suffix'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    UkkQuery::rem_suffix()\n"
-    "    UkkQuery::rem_suffix(int)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_rem_prefix__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkQuery_rem_prefix",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_rem_prefix" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  result = (arg1)->rem_prefix();
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_rem_prefix__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  SwigValueWrapper< UkkQuery > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_rem_prefix",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_rem_prefix" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkQuery_rem_prefix" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  result = (arg1)->rem_prefix(arg2);
-  resultobj = SWIG_NewPointerObj((new UkkQuery(static_cast< const UkkQuery& >(result))), SWIGTYPE_p_UkkQuery, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_rem_prefix(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[3];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = args ? (int)PyObject_Length(args) : 0;
-  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_UkkQuery_rem_prefix__SWIG_0(self, args);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        int res = SWIG_AsVal_int(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        return _wrap_UkkQuery_rem_prefix__SWIG_1(self, args);
-      }
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'UkkQuery_rem_prefix'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    UkkQuery::rem_prefix()\n"
-    "    UkkQuery::rem_prefix(int)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_walkToSlice(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PatternInstance result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_walkToSlice",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_walkToSlice" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UkkQuery_walkToSlice" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  result = (arg1)->walkToSlice(arg2);
-  resultobj = SWIG_NewPointerObj((new PatternInstance(static_cast< const PatternInstance& >(result))), SWIGTYPE_p_std__pairT_int_int_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_instances(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  SwigValueWrapper< std::vector< std::pair< int,int >,std::allocator< std::pair< int,int > > > > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkQuery_instances",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_instances" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  result = (arg1)->instances();
-  resultobj = SWIG_NewPointerObj((new PatternInstanceList(static_cast< const PatternInstanceList& >(result))), SWIGTYPE_p_std__vectorT_std__pairT_int_int_t_std__allocatorT_std__pairT_int_int_t_t_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_countLeafs__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  UkkNode *arg2 = (UkkNode *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_countLeafs",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_countLeafs" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkQuery_countLeafs" "', argument " "2"" of type '" "UkkNode *""'"); 
-  }
-  arg2 = reinterpret_cast< UkkNode * >(argp2);
-  result = (int)(arg1)->countLeafs(arg2);
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_countLeafs__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  UkkEdgeBase *arg2 = (UkkEdgeBase *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:UkkQuery_countLeafs",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_countLeafs" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkEdgeBase, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkQuery_countLeafs" "', argument " "2"" of type '" "UkkEdgeBase *""'"); 
-  }
-  arg2 = reinterpret_cast< UkkEdgeBase * >(argp2);
-  result = (int)(arg1)->countLeafs(arg2);
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_countLeafs(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[3];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = args ? (int)PyObject_Length(args) : 0;
-  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_UkkNode, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_UkkQuery_countLeafs__SWIG_0(self, args);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_UkkEdgeBase, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_UkkQuery_countLeafs__SWIG_1(self, args);
-      }
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'UkkQuery_countLeafs'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    UkkQuery::countLeafs(UkkNode *)\n"
-    "    UkkQuery::countLeafs(UkkEdgeBase *)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_collectLeafs__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  UkkEdgeBase *arg2 = (UkkEdgeBase *) 0 ;
-  int arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int val3 ;
-  int ecode3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  SwigValueWrapper< std::vector< int,std::allocator< int > > > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:UkkQuery_collectLeafs",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_collectLeafs" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkEdgeBase, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkQuery_collectLeafs" "', argument " "2"" of type '" "UkkEdgeBase *""'"); 
-  }
-  arg2 = reinterpret_cast< UkkEdgeBase * >(argp2);
-  ecode3 = SWIG_AsVal_int(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "UkkQuery_collectLeafs" "', argument " "3"" of type '" "int""'");
-  } 
-  arg3 = static_cast< int >(val3);
-  result = (arg1)->collectLeafs(arg2,arg3);
-  resultobj = SWIG_NewPointerObj((new std::vector< int,std::allocator< int > >(static_cast< const std::vector< int,std::allocator< int > >& >(result))), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_collectLeafs__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  UkkNode *arg2 = (UkkNode *) 0 ;
-  int arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int val3 ;
-  int ecode3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  SwigValueWrapper< std::vector< int,std::allocator< int > > > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:UkkQuery_collectLeafs",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_collectLeafs" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_UkkNode, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UkkQuery_collectLeafs" "', argument " "2"" of type '" "UkkNode *""'"); 
-  }
-  arg2 = reinterpret_cast< UkkNode * >(argp2);
-  ecode3 = SWIG_AsVal_int(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "UkkQuery_collectLeafs" "', argument " "3"" of type '" "int""'");
-  } 
-  arg3 = static_cast< int >(val3);
-  result = (arg1)->collectLeafs(arg2,arg3);
-  resultobj = SWIG_NewPointerObj((new std::vector< int,std::allocator< int > >(static_cast< const std::vector< int,std::allocator< int > >& >(result))), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_collectLeafs(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[4];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = args ? (int)PyObject_Length(args) : 0;
-  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 3) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_UkkEdgeBase, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        {
-          int res = SWIG_AsVal_int(argv[2], NULL);
-          _v = SWIG_CheckState(res);
-        }
-        if (_v) {
-          return _wrap_UkkQuery_collectLeafs__SWIG_0(self, args);
-        }
-      }
-    }
-  }
-  if (argc == 3) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_UkkQuery, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_UkkNode, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        {
-          int res = SWIG_AsVal_int(argv[2], NULL);
-          _v = SWIG_CheckState(res);
-        }
-        if (_v) {
-          return _wrap_UkkQuery_collectLeafs__SWIG_1(self, args);
-        }
-      }
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'UkkQuery_collectLeafs'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    UkkQuery::collectLeafs(UkkEdgeBase *,int)\n"
-    "    UkkQuery::collectLeafs(UkkNode *,int)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_UkkQuery_n_instances(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UkkQuery_n_instances",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UkkQuery_n_instances" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  result = (int)(arg1)->n_instances();
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_UkkQuery(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  UkkQuery *arg1 = (UkkQuery *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_UkkQuery",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_UkkQuery, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UkkQuery" "', argument " "1"" of type '" "UkkQuery *""'"); 
-  }
-  arg1 = reinterpret_cast< UkkQuery * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *UkkQuery_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_UkkQuery, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { (char *)"delete_SwigPyIterator", _wrap_delete_SwigPyIterator, METH_VARARGS, NULL},
@@ -10847,7 +9124,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UkkTree_substring", _wrap_UkkTree_substring, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_leafString", _wrap_UkkTree_leafString, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_edgeString", _wrap_UkkTree_edgeString, METH_VARARGS, NULL},
-	 { (char *)"UkkTree_query", _wrap_UkkTree_query, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_search", _wrap_UkkTree_search, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_count", _wrap_UkkTree_count, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_pptext", _wrap_UkkTree_pptext, METH_VARARGS, NULL},
@@ -10855,96 +9131,37 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UkkTree_DOT", _wrap_UkkTree_DOT, METH_VARARGS, NULL},
 	 { (char *)"delete_UkkTree", _wrap_delete_UkkTree, METH_VARARGS, NULL},
 	 { (char *)"UkkTree_swigregister", UkkTree_swigregister, METH_VARARGS, NULL},
-	 { (char *)"UkkEdgeBase_first_set", _wrap_UkkEdgeBase_first_set, METH_VARARGS, NULL},
-	 { (char *)"UkkEdgeBase_first_get", _wrap_UkkEdgeBase_first_get, METH_VARARGS, NULL},
-	 { (char *)"UkkEdgeBase_lenght", _wrap_UkkEdgeBase_lenght, METH_VARARGS, NULL},
-	 { (char *)"UkkEdgeBase_node", _wrap_UkkEdgeBase_node, METH_VARARGS, NULL},
-	 { (char *)"UkkEdgeBase_split", _wrap_UkkEdgeBase_split, METH_VARARGS, NULL},
-	 { (char *)"delete_UkkEdgeBase", _wrap_delete_UkkEdgeBase, METH_VARARGS, NULL},
-	 { (char *)"UkkEdgeBase_swigregister", UkkEdgeBase_swigregister, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_father_set", _wrap_UkkNode_father_set, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_father_get", _wrap_UkkNode_father_get, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_edges_set", _wrap_UkkNode_edges_set, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_edges_get", _wrap_UkkNode_edges_get, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_suffixLink_set", _wrap_UkkNode_suffixLink_set, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_suffixLink_get", _wrap_UkkNode_suffixLink_get, METH_VARARGS, NULL},
-	 { (char *)"new_UkkNode", _wrap_new_UkkNode, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_name_set", _wrap_UkkNode_name_set, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_name_get", _wrap_UkkNode_name_get, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_pprint", _wrap_UkkNode_pprint, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_isRoot", _wrap_UkkNode_isRoot, METH_VARARGS, NULL},
-	 { (char *)"delete_UkkNode", _wrap_delete_UkkNode, METH_VARARGS, NULL},
-	 { (char *)"UkkNode_swigregister", UkkNode_swigregister, METH_VARARGS, NULL},
-	 { (char *)"new_UkkLeaf", _wrap_new_UkkLeaf, METH_VARARGS, NULL},
-	 { (char *)"UkkLeaf_lenght", _wrap_UkkLeaf_lenght, METH_VARARGS, NULL},
-	 { (char *)"UkkLeaf_node", _wrap_UkkLeaf_node, METH_VARARGS, NULL},
-	 { (char *)"delete_UkkLeaf", _wrap_delete_UkkLeaf, METH_VARARGS, NULL},
-	 { (char *)"UkkLeaf_swigregister", UkkLeaf_swigregister, METH_VARARGS, NULL},
-	 { (char *)"UkkEdge_last_set", _wrap_UkkEdge_last_set, METH_VARARGS, NULL},
-	 { (char *)"UkkEdge_last_get", _wrap_UkkEdge_last_get, METH_VARARGS, NULL},
-	 { (char *)"UkkEdge_n_set", _wrap_UkkEdge_n_set, METH_VARARGS, NULL},
-	 { (char *)"UkkEdge_n_get", _wrap_UkkEdge_n_get, METH_VARARGS, NULL},
-	 { (char *)"new_UkkEdge", _wrap_new_UkkEdge, METH_VARARGS, NULL},
-	 { (char *)"UkkEdge_node", _wrap_UkkEdge_node, METH_VARARGS, NULL},
-	 { (char *)"UkkEdge_lenght", _wrap_UkkEdge_lenght, METH_VARARGS, NULL},
-	 { (char *)"delete_UkkEdge", _wrap_delete_UkkEdge, METH_VARARGS, NULL},
-	 { (char *)"UkkEdge_swigregister", UkkEdge_swigregister, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_label", _wrap_UkkQuery_label, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_path", _wrap_UkkQuery_path, METH_VARARGS, NULL},
-	 { (char *)"new_UkkQuery", _wrap_new_UkkQuery, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_add_suffix", _wrap_UkkQuery_add_suffix, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_add_prefix", _wrap_UkkQuery_add_prefix, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_rem_suffix", _wrap_UkkQuery_rem_suffix, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_rem_prefix", _wrap_UkkQuery_rem_prefix, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_walkToSlice", _wrap_UkkQuery_walkToSlice, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_instances", _wrap_UkkQuery_instances, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_countLeafs", _wrap_UkkQuery_countLeafs, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_collectLeafs", _wrap_UkkQuery_collectLeafs, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_n_instances", _wrap_UkkQuery_n_instances, METH_VARARGS, NULL},
-	 { (char *)"delete_UkkQuery", _wrap_delete_UkkQuery, METH_VARARGS, NULL},
-	 { (char *)"UkkQuery_swigregister", UkkQuery_swigregister, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
-static void *_p_UkkLeafTo_p_UkkEdgeBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((UkkEdgeBase *)  ((UkkLeaf *) x));
-}
-static void *_p_UkkEdgeTo_p_UkkEdgeBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((UkkEdgeBase *)  ((UkkEdge *) x));
-}
-static swig_type_info _swigt__p_UkkEdge = {"_p_UkkEdge", "UkkEdge *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Symbol = {"_p_Symbol", "Symbol *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_UkkEdgeBase = {"_p_UkkEdgeBase", "UkkEdgeBase *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_UkkLeaf = {"_p_UkkLeaf", "UkkLeaf *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_UkkNode = {"_p_UkkNode", "UkkNode *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_UkkQuery = {"_p_UkkQuery", "UkkQuery *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_UkkTree = {"_p_UkkTree", "UkkTree *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_UkkTreeOptions = {"_p_UkkTreeOptions", "UkkTreeOptions *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_char = {"_p_char", "char *|Symbol *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_PyObject = {"_p_p_PyObject", "PyObject **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__allocatorT_char_t = {"_p_std__allocatorT_char_t", "std::vector< char >::allocator_type *|std::allocator< char > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_int_UkkNode_p_t = {"_p_std__pairT_int_UkkNode_p_t", "UkkTreeIndex *|std::pair< int,UkkNode * > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__pairT_int_int_t = {"_p_std__pairT_int_int_t", "PatternInstance *|std::pair< int,int > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__unordered_mapT_char_UkkEdgeBase_p_t = {"_p_std__unordered_mapT_char_UkkEdgeBase_p_t", "std::unordered_map< char,UkkEdgeBase * > *|SymbolMap *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t = {"_p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t", "std::vector< Symbol,std::allocator< Symbol > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT__Tp__Alloc_t = {"_p_std__vectorT__Tp__Alloc_t", "std::vector< _Tp,_Alloc > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_char_std__allocatorT_char_t_t = {"_p_std__vectorT_char_std__allocatorT_char_t_t", "std::vector< char,std::allocator< char > > *|std::vector< Symbol,std::allocator< Symbol > > *|std::vector< char > *|SymbolList *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_int_std__allocatorT_int_t_t = {"_p_std__vectorT_int_std__allocatorT_int_t_t", "std::vector< int,std::allocator< int > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_std__pairT_int_int_t_std__allocatorT_std__pairT_int_int_t_t_t = {"_p_std__vectorT_std__pairT_int_int_t_std__allocatorT_std__pairT_int_int_t_t_t", "PatternInstanceList *|std::vector< std::pair< int,int >,std::allocator< std::pair< int,int > > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_char_std__allocatorT_char_t_t = {"_p_std__vectorT_char_std__allocatorT_char_t_t", "std::vector< char > *|std::vector< char,std::allocator< char > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__SwigPyIterator = {"_p_swig__SwigPyIterator", "swig::SwigPyIterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
-  &_swigt__p_UkkEdge,
+  &_swigt__p_Symbol,
   &_swigt__p_UkkEdgeBase,
   &_swigt__p_UkkLeaf,
   &_swigt__p_UkkNode,
-  &_swigt__p_UkkQuery,
   &_swigt__p_UkkTree,
   &_swigt__p_UkkTreeOptions,
   &_swigt__p_allocator_type,
@@ -10955,21 +9172,17 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__allocatorT_char_t,
   &_swigt__p_std__invalid_argument,
   &_swigt__p_std__pairT_int_UkkNode_p_t,
-  &_swigt__p_std__pairT_int_int_t,
-  &_swigt__p_std__unordered_mapT_char_UkkEdgeBase_p_t,
+  &_swigt__p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t,
   &_swigt__p_std__vectorT__Tp__Alloc_t,
   &_swigt__p_std__vectorT_char_std__allocatorT_char_t_t,
-  &_swigt__p_std__vectorT_int_std__allocatorT_int_t_t,
-  &_swigt__p_std__vectorT_std__pairT_int_int_t_std__allocatorT_std__pairT_int_int_t_t_t,
   &_swigt__p_swig__SwigPyIterator,
   &_swigt__p_value_type,
 };
 
-static swig_cast_info _swigc__p_UkkEdge[] = {  {&_swigt__p_UkkEdge, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_UkkEdgeBase[] = {  {&_swigt__p_UkkLeaf, _p_UkkLeafTo_p_UkkEdgeBase, 0, 0},  {&_swigt__p_UkkEdge, _p_UkkEdgeTo_p_UkkEdgeBase, 0, 0},  {&_swigt__p_UkkEdgeBase, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Symbol[] = {  {&_swigt__p_Symbol, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_UkkEdgeBase[] = {  {&_swigt__p_UkkEdgeBase, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_UkkLeaf[] = {  {&_swigt__p_UkkLeaf, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_UkkNode[] = {  {&_swigt__p_UkkNode, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_UkkQuery[] = {  {&_swigt__p_UkkQuery, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_UkkTree[] = {  {&_swigt__p_UkkTree, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_UkkTreeOptions[] = {  {&_swigt__p_UkkTreeOptions, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
@@ -10980,21 +9193,17 @@ static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0}
 static swig_cast_info _swigc__p_std__allocatorT_char_t[] = {  {&_swigt__p_std__allocatorT_char_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__invalid_argument[] = {  {&_swigt__p_std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_int_UkkNode_p_t[] = {  {&_swigt__p_std__pairT_int_UkkNode_p_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__pairT_int_int_t[] = {  {&_swigt__p_std__pairT_int_int_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__unordered_mapT_char_UkkEdgeBase_p_t[] = {  {&_swigt__p_std__unordered_mapT_char_UkkEdgeBase_p_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t[] = {  {&_swigt__p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT__Tp__Alloc_t[] = {  {&_swigt__p_std__vectorT__Tp__Alloc_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_char_std__allocatorT_char_t_t[] = {  {&_swigt__p_std__vectorT_char_std__allocatorT_char_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_int_std__allocatorT_int_t_t[] = {  {&_swigt__p_std__vectorT_int_std__allocatorT_int_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_std__pairT_int_int_t_std__allocatorT_std__pairT_int_int_t_t_t[] = {  {&_swigt__p_std__vectorT_std__pairT_int_int_t_std__allocatorT_std__pairT_int_int_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__SwigPyIterator[] = {  {&_swigt__p_swig__SwigPyIterator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
-  _swigc__p_UkkEdge,
+  _swigc__p_Symbol,
   _swigc__p_UkkEdgeBase,
   _swigc__p_UkkLeaf,
   _swigc__p_UkkNode,
-  _swigc__p_UkkQuery,
   _swigc__p_UkkTree,
   _swigc__p_UkkTreeOptions,
   _swigc__p_allocator_type,
@@ -11005,12 +9214,9 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__allocatorT_char_t,
   _swigc__p_std__invalid_argument,
   _swigc__p_std__pairT_int_UkkNode_p_t,
-  _swigc__p_std__pairT_int_int_t,
-  _swigc__p_std__unordered_mapT_char_UkkEdgeBase_p_t,
+  _swigc__p_std__vectorT_Symbol_std__allocatorT_Symbol_t_t,
   _swigc__p_std__vectorT__Tp__Alloc_t,
   _swigc__p_std__vectorT_char_std__allocatorT_char_t_t,
-  _swigc__p_std__vectorT_int_std__allocatorT_int_t_t,
-  _swigc__p_std__vectorT_std__pairT_int_int_t_std__allocatorT_std__pairT_int_int_t_t_t,
   _swigc__p_swig__SwigPyIterator,
   _swigc__p_value_type,
 };
@@ -11697,8 +9903,6 @@ SWIG_init(void) {
   
   SWIG_InstallConstants(d,swig_const_table);
   
-  SWIG_Python_SetConstant(d, "FALSE",SWIG_From_int(static_cast< int >((0))));
-  SWIG_Python_SetConstant(d, "TRUE",SWIG_From_int(static_cast< int >((1))));
 #if PY_VERSION_HEX >= 0x03000000
   return m;
 #else
