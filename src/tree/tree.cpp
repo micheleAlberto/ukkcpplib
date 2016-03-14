@@ -39,11 +39,11 @@ UkkTreeIndex UkkTree::location_downward(UkkTreeIndex index){
         //traverse the tree from leafs toward the root looking for a suffix link
         if (index.second->isRoot()){
           //no suffix link is found
-          std::cout<<"LocDwn: root"<<std::endl;
+          //std::cout<<"LocDwn: root"<<std::endl;
           return UkkTreeIndex(0,root);
           };
         if (index.second->suffixLink){
-            std::cout<<"LocDwn: suffix"<<std::endl;
+            //std::cout<<"LocDwn: suffix"<<std::endl;
             return index;}
         auto father=index.second->father;
         for (auto edge_it:father->edges)
@@ -53,7 +53,7 @@ UkkTreeIndex UkkTree::location_downward(UkkTreeIndex index){
             UkkTreeIndex query(
               index.first-lenght_of_the_edge_i_am_walinkg_back,
               index.second->father);
-            std::cout<<"LocDwn: " <<lenght_of_the_edge_i_am_walinkg_back<<" steps"<<std::endl;
+            //std::cout<<"LocDwn: " <<lenght_of_the_edge_i_am_walinkg_back<<" steps"<<std::endl;
             return location_downward(query); }
         std::cout<<"[UkkTree::location_downward] this part of code should not be reached!!!"<<std::endl;
         };
@@ -90,7 +90,7 @@ void UkkTree::add_substring_to_node(UkkNode *node,int from, int to){
         std::cout<<"[UkkTree::add_substring_to_node] node #"<<node->name<<" from="<<from<<" to="<<to;
         std::cout<<"["<<x<<"]:"<<substring(from,to+1)<<std::endl;
         DEBUG CODE*/
-        std::cout<<"{START "<<node<<" "<<from<<" " <<to<<" "<<" }"<<std::endl;
+        //std::cout<<"{START "<<node<<" "<<from<<" " <<to<<" "<<" }"<<std::endl;
         int substring_lenght=to-from+1;
         /*
         std::cout<<"[UkkTree::add_substring_to_node] substring lenght :"<<substring_lenght<<std::endl;
@@ -98,7 +98,7 @@ void UkkTree::add_substring_to_node(UkkNode *node,int from, int to){
         auto edge_it=node->edges.find(x);
         if (edge_it==node->edges.end()){// #CASE1 (finale)
             //RULE2: new leaf case
-            std::cout<<"Rule2New"<<std::endl;
+            //std::cout<<"Rule2New"<<std::endl;
             /*
             std::cout<<"[UkkTree::add_substring_to_node] no edges[symbol]=>new leaf"<<std::endl;
             std::cout<<"[UkkTree::add_substring_to_node]<"<<from<<","<<to<<">RULE2 "<<std::endl;
@@ -111,7 +111,8 @@ void UkkTree::add_substring_to_node(UkkNode *node,int from, int to){
             && (! last_leaf_node->isRoot())
             && (! bool(last_leaf_node->suffixLink)))
                 {last_leaf_node->suffixLink=node;
-                std::cout<<"+s link"<<std::endl;};
+                //std::cout<<"+s link"<<std::endl;
+                };
             last_leaf_node=node;
             }
         else if (edgeLenght(edge_it->second)>=(substring_lenght))// #CASE2 (finale) //NOTE: il segno prima era >, diventato >=alle 19 di mercoledì
@@ -129,7 +130,7 @@ void UkkTree::add_substring_to_node(UkkNode *node,int from, int to){
             if (csl>=substring_lenght) {// #CASE2.1 (finale)
                 //this extension will be implicit , use rule 3
                 rule_3_used=TRUE;
-                std::cout<<"Rule3"<<std::endl;
+                //std::cout<<"Rule3"<<std::endl;
                 /*std::cout<<"[UkkTree::add_substring_to_node] ising RULE3"<<std::endl; DEBUG CODE*/
                 //following extensions will also be implicit in this phase
                 if (  bool(last_leaf_node)
@@ -138,7 +139,7 @@ void UkkTree::add_substring_to_node(UkkNode *node,int from, int to){
                     { /*std::cout << "[UkkTree::add_substring_to_node] suffixlink ";
                       std::cout << last_leaf_node->name;
                       std::cout << "-->"<<node->name<<std::endl; DEBUG CODE*/
-                      std::cout<<"+s link"<<std::endl;
+                      //std::cout<<"+s link"<<std::endl;
                       last_leaf_node->suffixLink=node;}
                 else{
                       /*
@@ -155,7 +156,7 @@ void UkkTree::add_substring_to_node(UkkNode *node,int from, int to){
             else {// #CASE2.2
                 //in this case common_substring_lenght<=substring_lenght
                   //this extension will split the the edge using RULE2
-                  std::cout<<"Rule2Split"<<std::endl;
+                  //std::cout<<"Rule2Split"<<std::endl;
                 /*
                 if edge is a leaf
                     assert last_common_index<=text_index
@@ -187,12 +188,12 @@ void UkkTree::add_substring_to_node(UkkNode *node,int from, int to){
             /*
             std::cout << "edgeLenght(edge)="<<edgeLenght(edge_it->second) << " is short , going down one node"<< std::endl;
             DEBUG CODE*/
-            std::cout<<"MOVE"<<std::endl;
+            //std::cout<<"MOVE"<<std::endl;
             UkkNode *next_node=edge_it->second->node();
             int next_from=from+edgeLenght(edge_it->second);
             int next_to=to;
             add_substring_to_node(next_node,next_from, next_to);};
-        std::cout<<"{STOP "<<node<<" "<<from<<" " <<to<<" "<<" }"<<std::endl;
+        //std::cout<<"{STOP "<<node<<" "<<from<<" " <<to<<" "<<" }"<<std::endl;
         return;};
 
 void UkkTree::add_substring_to_node_iterative(UkkNode *_node,int _from, int _to){
@@ -205,7 +206,7 @@ void UkkTree::add_substring_to_node_iterative(UkkNode *_node,int _from, int _to)
             auto edge_it=node->edges.find(x);
             if (edge_it==node->edges.end()){// #CASE1 (final)
                 //RULE2: new leaf case
-                std::cout<<"Rule2New"<<std::endl;
+                //std::cout<<"Rule2New"<<std::endl;
                 UkkLeaf *new_leaf= new UkkLeaf(from);
                 node->edges[x]=new_leaf;
                 last_leaf=new_leaf;
@@ -223,7 +224,7 @@ void UkkTree::add_substring_to_node_iterative(UkkNode *_node,int _from, int _to)
                 int csl=common_substring_lenght(from,edge->first);
                 if (csl>substring_lenght) {// #CASE2.1 (finale)
                     //this extension will be implicit , use rule 3
-                    std::cout<<"Rule3"<<std::endl;
+                    //std::cout<<"Rule3"<<std::endl;
                     rule_3_used=TRUE;
                     //following extensions will also be implicit in this phase
                     if (  bool(last_leaf_node)
@@ -241,7 +242,7 @@ void UkkTree::add_substring_to_node_iterative(UkkNode *_node,int _from, int _to)
                         assert last_common_index< edge.last
                     */
                     UkkEdgeBase *edge=edge_it->second;
-                    std::cout<<"Rule2Split"<<std::endl;
+                    //std::cout<<"Rule2Split"<<std::endl;
                     split_edge(
                         node,
                         edge,
@@ -278,7 +279,7 @@ void UkkTree::add_symbol(Symbol x){
         text.push_back(x);
         int extension=n_leafs;
         rule_3_used=FALSE;
-        std::cout<<"ADD:"<<x<<std::endl;
+        //std::cout<<"ADD:"<<x<<std::endl;
         /*
         std::cout<<"[UkkTree::add_symbol] RULE1 "<<n_leafs<<"times"<<std::endl;
         std::cout<<"[UkkTree::add_symbol] text index :"<<text_index;
@@ -293,7 +294,7 @@ void UkkTree::add_symbol(Symbol x){
             DEBUG CODE*/
             if (last_leaf_node==root){
                 //std::cout<<"[UkkTree::add_symbol] LLF node ==ROOT "<<std::endl; DEBUG CODE*/
-                std::cout<<"llf_node==root:"<<std::endl;
+                //std::cout<<"llf_node==root:"<<std::endl;
                 add_substring_to_node (root,extension,text_index);}
             else {
                 //std::cout<<"[UkkTree::add_symbol] LLF node !=ROOT #"<<last_leaf_node->name<<std::endl; DEBUG CODE*/
@@ -301,7 +302,7 @@ void UkkTree::add_symbol(Symbol x){
                 //UkkTreeIndex query(last_leaf.first-1,last_leaf_node)
                 UkkTreeIndex result=location_downward(query);
                 if (result.second->isRoot()){
-                    std::cout<<"llf_node!=root; still root"<<std::endl;
+                    //std::cout<<"llf_node!=root; still root"<<std::endl;
                     //std::cout<<"[UkkTree::add_symbol] downward get to ROOT "<<std::endl; DEBUG CODE*/
                     add_substring_to_node (root,extension,text_index);
                     }
@@ -309,7 +310,7 @@ void UkkTree::add_symbol(Symbol x){
                     //TODO:controllare qui e in location_downward
                     // forse "location_downward" non aggiorna bene l' indice numerico nel caso ricorsivo
                     UkkNode *node=result.second->suffixLink;
-                    std::cout<<"llf_node!=root; found node "<<node <<std::endl;
+                    //std::cout<<"llf_node!=root; found node "<<node <<std::endl;
                     //std::cout<<"[UkkTree::add_symbol] downward get to NODE "<<node->name<<std::endl; DEBUG CODE*/
                     add_substring_to_node(node,result.first+1,text_index);
                     }

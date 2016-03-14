@@ -14,7 +14,10 @@ std::string UkkTree::DOT(){
 
 std::string UkkTree::JSON(){
   std::stringstream ss;
+  std::string textString( text.begin(), text.end() );
   ss<<"{";
+  ss<<"\"root\":"<< root->name <<",\n";
+  ss<<"\"text\":\""<< textString <<"\",\n";
   ss<<JSON(root);
   ss<<"}\n";
   return ss.str();
