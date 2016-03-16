@@ -7,7 +7,6 @@
 #include "node.hpp"
 #include "symbol.hpp"
 #include "options.hpp"
-#include "query/query.hpp"
 class UkkNode;
 class UkkLeaf;
 class UkkEdgeBase;
